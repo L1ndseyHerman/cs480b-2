@@ -6,6 +6,9 @@ using System.Text;
 
 namespace quotable.core
 {
+    /// <summary>
+    /// The class for a quote.
+    /// </summary>
     public sealed class QuoteObject
     {
         public long Id { get; set; }
