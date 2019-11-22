@@ -9,6 +9,10 @@ namespace quotable.core
     /// </summary>
     public sealed class DefaultRandomQuoteGenerator : RandomQuoteProvider
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="theQuotes"></param>
         public DefaultRandomQuoteGenerator(IEnumerable<string> theQuotes)
         {
             foreach (var x in theQuotes)

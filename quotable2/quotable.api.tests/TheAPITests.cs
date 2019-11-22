@@ -4,13 +4,22 @@ using quotable.core;
 
 namespace Tests
 {
+    /// <summary>
+    /// Tests the API
+    /// </summary>
     public class Tests
     {
+        /// <summary>
+        /// Runs once or something
+        /// </summary>
         [SetUp]
         public void Setup()
         {
         }
 
+        /// <summary>
+        /// Something about it runs multiple times or has multiple tests or something. 
+        /// </summary>
         [Test]
         public void Test1()
         {

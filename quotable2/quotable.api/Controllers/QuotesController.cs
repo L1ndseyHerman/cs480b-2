@@ -9,17 +9,29 @@ using quotable.core.data;
 
 namespace quotable.api.Controllers
 {
+    /// <summary>
+    /// API controller for quotes
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class QuotesController : ControllerBase
     {
         private readonly QuotableContext _context;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="context">The database context to data access.</param>
         public QuotesController(QuotableContext context)
         {
             _context = context;
         }
 
+        // GET api/values
+        /// <summary>
+        /// Returns all the quotes.
+        /// </summary>
+        /// <returns>All the quotes.</returns>
         [HttpGet]
         public IEnumerable<Models.QuoteTable> Get()
         {
@@ -30,7 +42,12 @@ namespace quotable.api.Controllers
                    };
         }
 
-
+        // GET api/values/5
+        /// <summary>
+        /// Gets a specific quote.
+        /// </summary>
+        /// <param name="id">The id of the quote to get.</param>
+        /// <returns>The document.</returns>
         [HttpGet("{id}")]
         public ActionResult<Models.QuoteTable> Get(long id)
         {
@@ -49,11 +66,11 @@ namespace quotable.api.Controllers
 
 
 
-
+        /*
         /// <summary>
         ///     Not sure what it does, but it needs to be there.
         /// </summary>
-        /*private RandomQuoteProvider Provider { get; }
+        private RandomQuoteProvider Provider { get; }
 
         /// <summary>
         ///     Not sure what it does, but it needs to be there.

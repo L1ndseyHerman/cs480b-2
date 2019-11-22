@@ -11,6 +11,12 @@ namespace quotable.core
     {
         private int quoteId;
         private string theQuote, author;
+        /// <summary>
+        /// Constructor, each quote has three parts
+        /// </summary>
+        /// <param name="quoteId"></param>
+        /// <param name="theQuote"></param>
+        /// <param name="author"></param>
         public quote(int quoteId, string theQuote, string author)
         {
             this.quoteId = quoteId;

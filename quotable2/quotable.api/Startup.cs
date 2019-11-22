@@ -15,16 +15,30 @@ using quotable.core.data;
 
 namespace quotable.api
 {
+    /// <summary>
+    /// The startup class for this API
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="configuration">The configuration for the application</param>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
+        /// <summary>
+        /// Wait, yours is private. Is this ok? 
+        /// </summary>
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        /// <summary>
+        /// Configure the services for the application.
+        /// </summary>
+        /// <param name="services">The collection of service.</param>
         public void ConfigureServices(IServiceCollection services) 
         {
             //  Trying to connect to code from hw1:
@@ -36,7 +50,12 @@ namespace quotable.api
             services.AddDbContext<QuotableContext>(options => options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")), ServiceLifetime.Transient);
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+
+        /// <summary>
+        /// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// </summary>
+        /// <param name="app">The application builder</param>
+        /// <param name="env">The hosting environment</param>
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())

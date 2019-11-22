@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace quotable.api.Models
 {
+    /// <summary>
+    /// Model for an author
+    /// </summary>
     public class AuthorTable
     {
         /// <summary>

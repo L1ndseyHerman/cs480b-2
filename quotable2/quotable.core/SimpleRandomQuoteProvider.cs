@@ -25,7 +25,9 @@ namespace quotable.core
         //  This string is created by what the quote class getters return.
         private string oneQuoteString;
 
-        //  Constructor like Java:
+        /// <summary>
+        /// Constructor like Java: 
+        /// </summary>
         public SimpleRandomQuoteProvider()
         {
             //theQuotes[0] = "Fear of a name only increases fear of the thing itself. — Hermione Granger";
@@ -35,14 +37,14 @@ namespace quotable.core
             quoteObjects[1] = new quote(1, "It is our choices, Harry, that show what we truly are, far more than our abilities.", "Albus Dumbledore");
             quoteObjects[2] = new quote(2, "I solemnly swear I am up to no good.", "Harry Potter");
         }
+
         /// <summary>
-        ///     Returns all of the quotes.
+        /// Shows all of the quotes
         /// </summary>
-        /// <param name="numQuotes"></param>
         /// <returns></returns>
-        //public IEnumerable<string> showQuotes(long numQuotes)
         public IEnumerable<string> showQuotes()
         {
+            //public IEnumerable<string> showQuotes(long numQuotes)
             /*foreach( var x in theQuotes )
             {
                 if (loopsSoFar < numQuotes)
@@ -53,7 +55,7 @@ namespace quotable.core
                 }
             }
             return theQuotes;*/
-            foreach(quote x in quoteObjects)
+            foreach (quote x in quoteObjects)
             {
                 if (loopsSoFar < 3)
                 {

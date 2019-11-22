@@ -3,13 +3,22 @@ using quotable.core;
 
 namespace Tests
 {
+    /// <summary>
+    /// Testing the core
+    /// </summary>
     public class Tests
     {
+        /// <summary>
+        /// Happens once
+        /// </summary>
         [SetUp]
         public void Setup()
         {
         }
 
+        /// <summary>
+        /// Does lots of stuff
+        /// </summary>
         [Test]
         public void Test1()
         {

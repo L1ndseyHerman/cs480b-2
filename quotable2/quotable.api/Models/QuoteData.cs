@@ -12,8 +12,17 @@ namespace quotable.api.Models
     /// </summary>
     public class QuoteData
     {
+        /// <summary>
+        /// Type in an id, get that single quote.
+        /// </summary>
         public string getQuoteByID { get; set; }
+        /// <summary>
+        /// Show all the quotes
+        /// </summary>
         public IEnumerable<string> showQuotes { get; set; }
+        /// <summary>
+        /// Get a single random quote.
+        /// </summary>
         public string getRandomQuote { get; set; }
     }
 }
